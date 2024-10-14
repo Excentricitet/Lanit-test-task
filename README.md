@@ -44,8 +44,6 @@ Cloning simple website.
 ```
 mkdir simple_website
 cd simple_website/
-git clone git@github.com:geshan/nginx-docker-compose.git
-git config --global user.name "Excentricitet"
 git clone https://github.com/geshan/nginx-docker-compose.git
 cd ~
 sudo apt install nodejs
