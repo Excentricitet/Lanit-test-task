@@ -1,4 +1,5 @@
 # Lanit test task
+Подключаюсь через mRemoteNG
  ```
 git --help
 git --version
@@ -57,12 +58,13 @@ cd nginx-docker-compose/
 docker compose -f basic.yaml up
 ```
 
-изменяем порт на 80.  
+В адресную строку браузера своей машины (не виртуальной) вбиваю http://XXXX.XXXX.XXXX.XXXX:8089/ (Первоначально был внешний порт 8089 в compose.yaml). Получаю ответ в браузере.
+Изменяем внешний порт на 80.  
 ```
 nano basic.yaml
 ```
 В адресную строку браузера своей машины (не виртуальной) вбиваю http://XXXX.XXXX.XXXX.XXXX:80/.  
-Создаём новое подключение к серверу.
+Создаём новое подключение к серверу через mRemoteNG.
 ```
 curl http://localhost:80
 ```
