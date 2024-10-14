@@ -22,12 +22,13 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
+```
 
+Installing Docker and docker-compose.
+```
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 docker ps
-
-docker-compose --version
 
 apt-cache policy docker-ce
 
@@ -37,7 +38,9 @@ curl -SL https://github.com/docker/compose/releases/download/v2.29.7/docker-comp
 chmod +x ~/.docker/cli-plugins/docker-compose
 
 docker compose version
-
+```
+Cloning simple website.  
+```
 mkdir simple_website
 cd simple_website/
 git clone git@github.com:geshan/nginx-docker-compose.git
@@ -54,12 +57,12 @@ cd nginx-docker-compose/
 docker compose -f basic.yaml up
 ```
 
+изменяем порт на 80.  
 ```
 nano basic.yaml
 ```
-изменяем порт на 80
-В адресную строку браузера своей машины (не виртуальной) вбиваю http://185.128.106.67:80/
-Создаём новое подключение к серверу
+В адресную строку браузера своей машины (не виртуальной) вбиваю http://XXXX.XXXX.XXXX.XXXX:80/.  
+Создаём новое подключение к серверу.
 ```
 curl http://localhost:80
 ```
